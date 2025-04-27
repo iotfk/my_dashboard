@@ -1,0 +1,132 @@
+/* Container and Header */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.search-input {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Table */
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.machine-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.machine-table th, .machine-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.machine-table th {
+    background-color: #f4f4f4;
+    cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 8px 12px;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.pagination span {
+    font-size: 14px;
+}
+
+/* Loading */
+.loading {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 18px;
+}
+
+/* Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.modal-content pre {
+    background: #f0f0f0;
+    padding: 10px;
+    overflow-x: auto;
+    text-align: left;
+}
+
+.close-btn {
+    margin-top: 15px;
+    padding: 8px 16px;
+}
+
+/* Icons */
+.icon-online { color: green; }
+.icon-offline { color: red; }
+.icon-burning { color: orange; }
+.icon-idle { color: gray; }
+
+/* Info Button */
+.info-btn {
+    background: none;
+    color: blue;
+    text-decoration: underline;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .search-input {
+        width: 300px;
+    }
+}

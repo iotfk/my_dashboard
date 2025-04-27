@@ -1,0 +1,108 @@
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 15px;
+  width: 100%;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  min-width: 0;
+}
+
+.card-inner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.text-container {
+  flex-grow: 1;
+  min-width: 0;
+}
+
+.text-title {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+/* Icon colors */
+.circle-color1 {
+  border: 4px solid blueviolet;
+}
+.card_icon1 {
+  color: blueviolet;
+}
+.circle-color2 {
+  border: 4px solid rgb(255, 184, 59);
+}
+.card_icon2 {
+  color: rgb(255, 184, 59);
+}
+.circle-color3 {
+  border: 4px solid rgb(126, 211, 33);
+}
+.card_icon3 {
+  color: rgb(126, 211, 33);
+}
+
+/* Loading and error states */
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  font-size: 18px;
+}
+
+.error {
+  color: #ff0000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-inner {
+    gap: 10px;
+  }
+  
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+  }
+}
